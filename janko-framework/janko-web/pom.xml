@@ -1,0 +1,42 @@
+<?xml version="1.0"?>
+<project
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd"
+	xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<modelVersion>4.0.0</modelVersion>
+	<parent>
+		<groupId>com.janko</groupId>
+		<artifactId>janko-framework</artifactId>
+		<version>${janko-version}</version>
+	</parent>
+	<artifactId>janko-web</artifactId>
+	<description>前端页面实现部分</description>
+	<packaging>war</packaging>
+	<properties>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+	</properties>
+	<dependencies>
+		<dependency>
+			<groupId>com.janko</groupId>
+			<artifactId>janko-common</artifactId>
+			<version>${janko-version}</version>
+		</dependency>
+		<dependency>
+			<groupId>com.janko</groupId>
+			<artifactId>janko-shiro</artifactId>
+			<version>${janko-version}</version>
+		</dependency>
+		<dependency>
+			<groupId>com.janko</groupId>
+			<artifactId>janko-gen</artifactId>
+			<version>${janko-version}</version>
+		</dependency>
+		<dependency>
+			<groupId>com.janko</groupId>
+			<artifactId>janko-api</artifactId>
+			<version>${janko-version}</version>
+		</dependency>
+	</dependencies>
+	<build>
+		<finalName>janko-framework</finalName>
+	</build>
+</project>
