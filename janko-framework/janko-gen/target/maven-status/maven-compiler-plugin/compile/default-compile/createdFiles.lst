@@ -1,0 +1,7 @@
+com\janko\controller\SysGeneratorController.class
+com\janko\entity\ColumnEntity.class
+com\janko\utils\GenUtils.class
+com\janko\service\impl\SysGeneratorServiceImpl.class
+com\janko\service\SysGeneratorService.class
+com\janko\dao\SysGeneratorDao.class
+com\janko\entity\TableEntity.class

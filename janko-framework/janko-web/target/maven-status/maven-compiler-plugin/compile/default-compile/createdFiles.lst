@@ -1,0 +1,10 @@
+com\janko\task\TestTask.class
+com\janko\service\impl\SysOssServiceImpl.class
+com\janko\controller\SysLogController.class
+com\janko\dao\SysOssDao.class
+com\janko\aop\SysLogAspect.class
+com\janko\service\SysOssService.class
+com\janko\controller\SysPageController.class
+com\janko\entity\SysOssEntity.class
+com\janko\controller\SysConfigController.class
+com\janko\controller\SysOssController.class

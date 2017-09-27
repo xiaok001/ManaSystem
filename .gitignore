@@ -1,0 +1,11 @@
+# Eclipse
+.classpath
+.project
+.externalToolBuilders/
+.metadata
+.settings
+*/target/*
+.jar
+.git
+*/logs/*
+*.class

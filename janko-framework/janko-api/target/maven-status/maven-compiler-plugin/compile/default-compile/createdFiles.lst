@@ -1,0 +1,16 @@
+com\janko\interceptor\AuthorizationInterceptor.class
+com\janko\Swagger2Config.class
+com\janko\api\ApiLoginController.class
+com\janko\service\UserService.class
+com\janko\service\impl\TokenServiceImpl.class
+com\janko\dao\UserDao.class
+com\janko\annotation\LoginUser.class
+com\janko\entity\UserEntity.class
+com\janko\dao\TokenDao.class
+com\janko\api\ApiTestController.class
+com\janko\service\impl\UserServiceImpl.class
+com\janko\api\ApiRegisterController.class
+com\janko\annotation\IgnoreAuth.class
+com\janko\resolver\LoginUserHandlerMethodArgumentResolver.class
+com\janko\entity\TokenEntity.class
+com\janko\service\TokenService.class
