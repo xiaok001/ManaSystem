@@ -1,0 +1,2 @@
+[WARN][2017-09-27 14:43:26] org.apache.velocity.tools.view.XMLToolboxManager.<init>(XMLToolboxManager.java:100) XMLToolboxManager has been deprecated. Please use org.apache.velocity.tools.ToolboxFactory instead. 
+[WARN][2017-09-27 14:43:26] org.apache.velocity.tools.view.servlet.ServletToolboxManager.<init>(ServletToolboxManager.java:131) ServletToolboxManager has been deprecated. Please use org.apache.velocity.tools.ToolboxFactory instead. 
