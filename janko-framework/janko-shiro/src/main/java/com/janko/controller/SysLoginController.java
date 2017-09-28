@@ -63,9 +63,9 @@ public class SysLoginController {
 	public R login(String username, String password, String captcha)throws IOException {
 		String kaptcha = ShiroUtils.getKaptcha(Constants.KAPTCHA_SESSION_KEY);
 		//TODO: 取消登陆验证码的验证
-		/*if(!captcha.equalsIgnoreCase(kaptcha)){
-			return R.error("验证码不正确");
-		}*/
+		if(!captcha.equalsIgnoreCase(kaptcha)){
+			return R.error(501,"验证码不正确");
+		}
 		
 		try{
 			Subject subject = ShiroUtils.getSubject();
@@ -80,7 +80,7 @@ public class SysLoginController {
 		}catch (LockedAccountException e) {
 			return R.error(e.getMessage());
 		}catch (AuthenticationException e) {
-			return R.error("账户验证失败");
+			return R.error(404,"账户验证失败");
 		}
 	    
 		return R.ok();

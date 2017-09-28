@@ -86,3 +86,24 @@ function getSelectedRows() {
     
     return grid.getGridParam("selarrrow");
 }
+
+
+
+
+/*===========================================校验代码============================================*/
+/**
+ * 邮箱格式校验
+ * @param 邮箱账号
+ * @returns 返回true、false
+ */
+function ismail(mail){
+	return(new RegExp(/^(?:[a-zA-Z0-9]+[_\-\+\.]?)*[a-zA-Z0-9]+@(?:([a-zA-Z0-9]+[_\-]?)*[a-zA-Z0-9]+\.)+([a-zA-Z]{2,})+$/).test(mail));
+}
+/**
+ * 返回当前时间的时间戳 例：1506581248275
+ * @returns
+ */
+function genTimestamp() {
+	var time = new Date();
+	return time.getTime();
+}
