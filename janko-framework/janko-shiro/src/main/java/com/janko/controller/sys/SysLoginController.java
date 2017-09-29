@@ -1,10 +1,10 @@
-package com.janko.controller;
-
-import com.janko.utils.R;
-import com.janko.utils.ShiroUtils;
+package com.janko.controller.sys;
 
 import java.awt.image.BufferedImage;
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Map;
 
 import javax.imageio.ImageIO;
 import javax.servlet.ServletException;
@@ -24,8 +24,16 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 
+import com.alibaba.druid.util.StringUtils;
 import com.google.code.kaptcha.Constants;
 import com.google.code.kaptcha.Producer;
+import com.google.gson.Gson;
+import com.janko.entity.SysUserEntity;
+import com.janko.service.RedisService;
+import com.janko.utils.R;
+import com.janko.utils.ShiroUtils;
+
+import com.janko.service.impl.AbstractBaseRedisService;
 
 /**
  * 登录相关
@@ -35,15 +43,16 @@ import com.google.code.kaptcha.Producer;
  * @date 2016年11月10日 下午1:15:31
  */
 @Controller
-public class SysLoginController {
+public class SysLoginController extends AbstractBaseRedisService<String, Object>{
 	@Autowired
 	private Producer producer;
+	
 	
 	@RequestMapping("captcha.jpg")
 	public void captcha(HttpServletResponse response)throws ServletException, IOException {
         response.setHeader("Cache-Control", "no-store, no-cache");
         response.setContentType("image/jpeg");
-
+        
         //生成文字验证码
         String text = producer.createText();
         //生成图片验证码
@@ -63,10 +72,10 @@ public class SysLoginController {
 	public R login(String username, String password, String captcha)throws IOException {
 		String kaptcha = ShiroUtils.getKaptcha(Constants.KAPTCHA_SESSION_KEY);
 		//TODO: 取消登陆验证码的验证
-		if(!captcha.equalsIgnoreCase(kaptcha)){
+		/*if(!captcha.equalsIgnoreCase(kaptcha)){
 			return R.error(501,"验证码不正确");
-		}
-		
+		}*/
+		//TestFun();
 		try{
 			Subject subject = ShiroUtils.getSubject();
 			//sha256加密
@@ -93,6 +102,44 @@ public class SysLoginController {
 	public String logout() {
 		ShiroUtils.logout();
 		return "redirect:login.html";
+	}
+	
+	@Autowired
+	RedisService redisService;
+	
+	public void TestFun(){
+		/*↓↓↓↓↓↓该部分是redis的取值↑↑↓↓↓↓↓↓*/
+		String carGpsInfo = (String) redisService.getObj("abc", carCurrentRedisTemplate);// DB0																			// 事实位置信息
+		/* 判断redis0中的车辆实时数据 */
+		if (!StringUtils.isEmpty(carGpsInfo)) {
+			Gson gs = new Gson();
+		}
+		/*↑↑↑↑↑↑↑↑该部分是redis的取值↑↑↑↑↑↑↑↑*/
+		
+		/*↓↓↓↓↓↓该部分是redis的设值↑↑↓↓↓↓↓↓*/
+		
+		for (int i = 0; i < 10; i++) {
+			redisService.set("key"+i, "value"+i, carCurrentRedisTemplate);
+		}
+		/*↑↑↑↑↑↑↑↑该部分是redis的设值↑↑↑↑↑↑↑↑*/
+		redisService.delete("keys", carCurrentRedisTemplate);
+		List<SysUserEntity> am=new ArrayList<SysUserEntity>();
+		SysUserEntity user=new SysUserEntity();
+		user.setCreateTime(new java.util.Date());
+		user.setCreateUserId(1L);
+		user.setEmail("123");
+		user.setMobile("18601235468");
+		user.setPassword("123");
+		user.setUsername("name");
+		am.add(user);
+		/*redisService.addObjectList(am, carCurrentRedisTemplate);*/
+		
+		
+		List<String> lst=new ArrayList<String>();
+		for (int i = 1; i < 8; i++) {
+			lst.add("key"+i);
+		}
+		redisService.delete(lst, carCurrentRedisTemplate);
 	}
 	
 }

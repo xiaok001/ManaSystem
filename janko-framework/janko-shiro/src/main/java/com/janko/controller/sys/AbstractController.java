@@ -1,4 +1,4 @@
-package com.janko.controller;
+package com.janko.controller.sys;
 
 import com.janko.entity.SysUserEntity;
 import com.janko.utils.ShiroUtils;

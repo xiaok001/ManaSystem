@@ -1,6 +1,7 @@
 package com.janko.controller;
 
 import com.janko.annotation.SysLog;
+import com.janko.controller.sys.AbstractController;
 import com.janko.entity.SysConfigEntity;
 import com.janko.service.SysConfigService;
 import com.janko.utils.PageUtils;
