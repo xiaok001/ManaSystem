@@ -8,7 +8,7 @@
 	</select>
 
 	<select id="queryList" resultType="com.janko.entity.SysLogEntity">
-		select * ,count(1) as total from sys_log 
+		select * from sys_log 
 		<where>
 			<if test="key != null and key.trim() != ''">
 				`username` like concat('%',#{key},'%') or `operation` like concat('%',#{key},'%')
