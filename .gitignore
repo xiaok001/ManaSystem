@@ -1,5 +1,4 @@
 # Eclipse
-.classpath
 .project
 .externalToolBuilders/
 .metadata
@@ -9,3 +8,9 @@
 .git
 */logs/*
 *.class
+.gitignore
+*/.gitignore
+.classpath
+*/.classpath
+
+
