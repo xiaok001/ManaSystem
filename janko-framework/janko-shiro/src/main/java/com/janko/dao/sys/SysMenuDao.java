@@ -1,8 +1,9 @@
-package com.janko.dao;
-
-import com.janko.entity.SysMenuEntity;
+package com.janko.dao.sys;
 
 import java.util.List;
+
+import com.janko.dao.BaseDao;
+import com.janko.entity.sys.SysMenuEntity;
 
 /**
  * 菜单管理

@@ -1,8 +1,8 @@
 package com.janko.controller.sys;
 
 import com.janko.annotation.SysLog;
-import com.janko.entity.SysMenuEntity;
-import com.janko.service.SysMenuService;
+import com.janko.entity.sys.SysMenuEntity;
+import com.janko.service.sys.SysMenuService;
 import com.janko.utils.*;
 import com.janko.utils.Constant.MenuType;
 import org.apache.commons.lang.StringUtils;

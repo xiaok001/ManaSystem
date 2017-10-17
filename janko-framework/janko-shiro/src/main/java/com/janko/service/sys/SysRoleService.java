@@ -1,9 +1,9 @@
-package com.janko.service;
-
-import com.janko.entity.SysRoleEntity;
+package com.janko.service.sys;
 
 import java.util.List;
 import java.util.Map;
+
+import com.janko.entity.sys.SysRoleEntity;
 
 
 /**

@@ -1,9 +1,9 @@
 package com.janko.controller.sys;
 
 import com.janko.annotation.SysLog;
-import com.janko.entity.SysUserEntity;
-import com.janko.service.SysUserRoleService;
-import com.janko.service.SysUserService;
+import com.janko.entity.sys.SysUserEntity;
+import com.janko.service.sys.SysUserRoleService;
+import com.janko.service.sys.SysUserService;
 import com.janko.utils.*;
 import com.janko.validator.group.AddGroup;
 import com.janko.validator.group.UpdateGroup;

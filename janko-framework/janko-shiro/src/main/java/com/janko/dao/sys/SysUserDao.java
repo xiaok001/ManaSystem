@@ -1,9 +1,10 @@
-package com.janko.dao;
-
-import com.janko.entity.SysUserEntity;
+package com.janko.dao.sys;
 
 import java.util.List;
 import java.util.Map;
+
+import com.janko.dao.BaseDao;
+import com.janko.entity.sys.SysUserEntity;
 
 /**
  * 系统用户

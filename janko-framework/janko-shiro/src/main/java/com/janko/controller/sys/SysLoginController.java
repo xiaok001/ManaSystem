@@ -28,7 +28,7 @@ import com.alibaba.druid.util.StringUtils;
 import com.google.code.kaptcha.Constants;
 import com.google.code.kaptcha.Producer;
 import com.google.gson.Gson;
-import com.janko.entity.SysUserEntity;
+import com.janko.entity.sys.SysUserEntity;
 import com.janko.service.RedisService;
 import com.janko.utils.R;
 import com.janko.utils.ShiroUtils;

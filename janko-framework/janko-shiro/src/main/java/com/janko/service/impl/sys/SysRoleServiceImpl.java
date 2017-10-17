@@ -1,11 +1,11 @@
-package com.janko.service.impl;
+package com.janko.service.impl.sys;
 
-import com.janko.dao.SysRoleDao;
-import com.janko.entity.SysRoleEntity;
-import com.janko.service.SysRoleMenuService;
-import com.janko.service.SysRoleService;
-import com.janko.service.SysUserRoleService;
-import com.janko.service.SysUserService;
+import com.janko.dao.sys.SysRoleDao;
+import com.janko.entity.sys.SysRoleEntity;
+import com.janko.service.sys.SysRoleMenuService;
+import com.janko.service.sys.SysRoleService;
+import com.janko.service.sys.SysUserRoleService;
+import com.janko.service.sys.SysUserService;
 import com.janko.utils.Constant;
 import com.janko.utils.RRException;
 

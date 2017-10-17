@@ -1,9 +1,9 @@
 package com.janko.controller.sys;
 
 import com.janko.annotation.SysLog;
-import com.janko.entity.SysRoleEntity;
-import com.janko.service.SysRoleMenuService;
-import com.janko.service.SysRoleService;
+import com.janko.entity.sys.SysRoleEntity;
+import com.janko.service.sys.SysRoleMenuService;
+import com.janko.service.sys.SysRoleService;
 import com.janko.utils.Constant;
 import com.janko.utils.PageUtils;
 import com.janko.utils.Query;

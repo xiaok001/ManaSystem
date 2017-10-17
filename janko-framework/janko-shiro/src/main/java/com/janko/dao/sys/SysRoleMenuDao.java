@@ -1,8 +1,9 @@
-package com.janko.dao;
-
-import com.janko.entity.SysRoleMenuEntity;
+package com.janko.dao.sys;
 
 import java.util.List;
+
+import com.janko.dao.BaseDao;
+import com.janko.entity.sys.SysRoleMenuEntity;
 
 /**
  * 角色与菜单对应关系

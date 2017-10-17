@@ -21,10 +21,10 @@ import org.apache.shiro.realm.AuthorizingRealm;
 import org.apache.shiro.subject.PrincipalCollection;
 import org.springframework.beans.factory.annotation.Autowired;
 
-import com.janko.dao.SysMenuDao;
-import com.janko.dao.SysUserDao;
-import com.janko.entity.SysMenuEntity;
-import com.janko.entity.SysUserEntity;
+import com.janko.dao.sys.SysMenuDao;
+import com.janko.dao.sys.SysUserDao;
+import com.janko.entity.sys.SysMenuEntity;
+import com.janko.entity.sys.SysUserEntity;
 
 /**
  * 认证

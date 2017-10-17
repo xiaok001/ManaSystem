@@ -1,4 +1,4 @@
-package com.janko.entity;
+package com.janko.entity.sys;
 
 
 import org.hibernate.validator.constraints.NotBlank;

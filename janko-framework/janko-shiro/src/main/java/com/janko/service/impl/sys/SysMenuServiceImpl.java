@@ -1,10 +1,10 @@
-package com.janko.service.impl;
+package com.janko.service.impl.sys;
 
-import com.janko.dao.SysMenuDao;
-import com.janko.entity.SysMenuEntity;
-import com.janko.service.SysMenuService;
-import com.janko.service.SysRoleMenuService;
-import com.janko.service.SysUserService;
+import com.janko.dao.sys.SysMenuDao;
+import com.janko.entity.sys.SysMenuEntity;
+import com.janko.service.sys.SysMenuService;
+import com.janko.service.sys.SysRoleMenuService;
+import com.janko.service.sys.SysUserService;
 import com.janko.utils.Constant.MenuType;
 
 import java.util.ArrayList;

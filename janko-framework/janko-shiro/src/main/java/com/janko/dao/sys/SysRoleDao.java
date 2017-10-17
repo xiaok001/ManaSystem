@@ -1,8 +1,9 @@
-package com.janko.dao;
-
-import com.janko.entity.SysRoleEntity;
+package com.janko.dao.sys;
 
 import java.util.List;
+
+import com.janko.dao.BaseDao;
+import com.janko.entity.sys.SysRoleEntity;
 
 /**
  * 角色管理

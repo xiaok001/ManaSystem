@@ -1,6 +1,6 @@
 package com.janko.controller.sys;
 
-import com.janko.entity.SysUserEntity;
+import com.janko.entity.sys.SysUserEntity;
 import com.janko.utils.ShiroUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

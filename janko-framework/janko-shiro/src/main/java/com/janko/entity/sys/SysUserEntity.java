@@ -1,4 +1,4 @@
-package com.janko.entity;
+package com.janko.entity.sys;
 
 import java.io.Serializable;
 import java.util.Date;

@@ -1,7 +1,7 @@
 package com.janko.task;
 
-import com.janko.entity.SysUserEntity;
-import com.janko.service.SysUserService;
+import com.janko.entity.sys.SysUserEntity;
+import com.janko.service.sys.SysUserService;
 
 import org.apache.commons.lang.builder.ToStringBuilder;
 import org.slf4j.Logger;

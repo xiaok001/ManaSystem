@@ -1,7 +1,7 @@
-package com.janko.service.impl;
+package com.janko.service.impl.sys;
 
-import com.janko.dao.SysUserRoleDao;
-import com.janko.service.SysUserRoleService;
+import com.janko.dao.sys.SysUserRoleDao;
+import com.janko.service.sys.SysUserRoleService;
 
 import java.util.HashMap;
 import java.util.List;

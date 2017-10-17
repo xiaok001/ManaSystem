@@ -1,9 +1,10 @@
 package com.janko.utils;
 
-import com.janko.entity.SysUserEntity;
 import org.apache.shiro.SecurityUtils;
 import org.apache.shiro.session.Session;
 import org.apache.shiro.subject.Subject;
+
+import com.janko.entity.sys.SysUserEntity;
 
 /**
  * Shiro工具类

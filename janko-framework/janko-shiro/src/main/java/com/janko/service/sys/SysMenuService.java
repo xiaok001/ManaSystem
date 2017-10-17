@@ -1,9 +1,9 @@
-package com.janko.service;
-
-import com.janko.entity.SysMenuEntity;
+package com.janko.service.sys;
 
 import java.util.List;
 import java.util.Map;
+
+import com.janko.entity.sys.SysMenuEntity;
 
 
 /**
