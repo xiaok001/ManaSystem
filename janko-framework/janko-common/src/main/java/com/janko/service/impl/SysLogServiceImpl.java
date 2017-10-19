@@ -1,13 +1,16 @@
 package com.janko.service.impl;
 
-import com.janko.dao.SysLogDao;
-import com.janko.entity.SysLogEntity;
-import com.janko.service.SysLogService;
+import java.util.List;
+import java.util.Map;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import java.util.List;
-import java.util.Map;
+import com.janko.dao.SysLogDao;
+import com.janko.entity.SysLogEntity;
+import com.janko.service.SysLogService;
+import com.janko.utils.MuliDataSouces.DataSource;
+import com.janko.utils.MuliDataSouces.DataSourceContextHolder;
 
 
 
@@ -22,6 +25,7 @@ public class SysLogServiceImpl implements SysLogService {
 	}
 	
 	@Override
+	@DataSource(DataSourceContextHolder.DATA_SOURCE_A)
 	public List<SysLogEntity> queryList(Map<String, Object> map){
 		return sysLogDao.queryList(map);
 	}

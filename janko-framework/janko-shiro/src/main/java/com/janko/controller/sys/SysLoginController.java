@@ -3,9 +3,10 @@ package com.janko.controller.sys;
 import java.awt.image.BufferedImage;
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
-import java.util.Map;
 
+import javax.annotation.Resource;
 import javax.imageio.ImageIO;
 import javax.servlet.ServletException;
 import javax.servlet.ServletOutputStream;
@@ -28,12 +29,15 @@ import com.alibaba.druid.util.StringUtils;
 import com.google.code.kaptcha.Constants;
 import com.google.code.kaptcha.Producer;
 import com.google.gson.Gson;
+import com.janko.entity.SysLogEntity;
 import com.janko.entity.sys.SysUserEntity;
 import com.janko.service.RedisService;
+import com.janko.service.SysLogService;
+import com.janko.service.impl.AbstractBaseRedisService;
+import com.janko.service.sys.SysUserRoleService;
+import com.janko.service.sys.SysUserService;
 import com.janko.utils.R;
 import com.janko.utils.ShiroUtils;
-
-import com.janko.service.impl.AbstractBaseRedisService;
 
 /**
  * 登录相关
@@ -76,6 +80,7 @@ public class SysLoginController extends AbstractBaseRedisService<String, Object>
 			return R.error(501,"验证码不正确");
 		}*/
 		//TestFun();
+		multiDataSourceTest();
 		try{
 			Subject subject = ShiroUtils.getSubject();
 			//sha256加密
@@ -142,4 +147,20 @@ public class SysLoginController extends AbstractBaseRedisService<String, Object>
 		redisService.delete(lst, carCurrentRedisTemplate);
 	}
 	
+	@Autowired
+	private SysUserService userService;
+
+	@Autowired
+	private SysLogService sysAdminService;
+	
+	public void multiDataSourceTest() {
+		try {
+			List<SysUserEntity> userList = userService.queryList(new HashMap<String, Object>());
+			System.out.println("======>userService的个数是："+userList.size());
+			List<SysLogEntity> adminList = sysAdminService.queryList(new HashMap<String,Object>());
+			System.out.println("======>sysAdminService的个数是："+adminList.size());
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+	}
 }

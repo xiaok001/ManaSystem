@@ -1,13 +1,5 @@
 package com.janko.service.impl.sys;
 
-import com.janko.dao.sys.SysUserDao;
-import com.janko.entity.sys.SysUserEntity;
-import com.janko.service.sys.SysRoleService;
-import com.janko.service.sys.SysUserRoleService;
-import com.janko.service.sys.SysUserService;
-import com.janko.utils.Constant;
-import com.janko.utils.RRException;
-
 import java.util.Date;
 import java.util.HashMap;
 import java.util.List;
@@ -18,6 +10,16 @@ import org.apache.shiro.crypto.hash.Sha256Hash;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
+
+import com.janko.dao.sys.SysUserDao;
+import com.janko.entity.sys.SysUserEntity;
+import com.janko.service.sys.SysRoleService;
+import com.janko.service.sys.SysUserRoleService;
+import com.janko.service.sys.SysUserService;
+import com.janko.utils.Constant;
+import com.janko.utils.RRException;
+import com.janko.utils.MuliDataSouces.DataSource;
+import com.janko.utils.MuliDataSouces.DataSourceContextHolder;
 
 
 
@@ -58,6 +60,7 @@ public class SysUserServiceImpl implements SysUserService {
 	}
 
 	@Override
+	@DataSource(DataSourceContextHolder.DATA_SOURCE_B)
 	public List<SysUserEntity> queryList(Map<String, Object> map){
 		return sysUserDao.queryList(map);
 	}
