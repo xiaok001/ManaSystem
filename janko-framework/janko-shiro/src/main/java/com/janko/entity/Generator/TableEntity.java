@@ -1,4 +1,4 @@
-package com.janko.entity;
+package com.janko.entity.Generator;
 
 import java.util.List;
 

@@ -322,7 +322,6 @@
 	</build>
 	
 	<modules>
-		<module>janko-gen</module>
 		<module>janko-common</module>
 		<module>janko-shiro</module>
 		<module>janko-web</module>

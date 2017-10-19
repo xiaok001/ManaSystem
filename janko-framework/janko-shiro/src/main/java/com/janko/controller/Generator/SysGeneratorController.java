@@ -1,11 +1,12 @@
-package com.janko.controller;
+package com.janko.controller.Generator;
 
-import com.alibaba.fastjson.JSON;
-import com.janko.service.SysGeneratorService;
-import com.janko.utils.PageUtils;
-import com.janko.utils.Query;
-import com.janko.utils.R;
-import com.janko.xss.XssHttpServletRequestWrapper;
+import java.io.IOException;
+import java.util.List;
+import java.util.Map;
+
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
 import org.apache.commons.io.IOUtils;
 import org.apache.shiro.authz.annotation.RequiresPermissions;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -14,11 +15,12 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
-import java.io.IOException;
-import java.util.List;
-import java.util.Map;
+import com.alibaba.fastjson.JSON;
+import com.janko.service.Generator.SysGeneratorService;
+import com.janko.utils.PageUtils;
+import com.janko.utils.Query;
+import com.janko.utils.R;
+import com.janko.xss.XssHttpServletRequestWrapper;
 
 /**
  * 代码生成器

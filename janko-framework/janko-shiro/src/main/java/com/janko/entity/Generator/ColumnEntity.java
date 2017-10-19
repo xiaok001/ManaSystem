@@ -1,4 +1,4 @@
-package com.janko.entity;
+package com.janko.entity.Generator;
 
 /**
  * 列的属性

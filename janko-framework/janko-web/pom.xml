@@ -27,11 +27,6 @@
 		</dependency>
 		<dependency>
 			<groupId>com.janko</groupId>
-			<artifactId>janko-gen</artifactId>
-			<version>${janko-version}</version>
-		</dependency>
-		<dependency>
-			<groupId>com.janko</groupId>
 			<artifactId>janko-api</artifactId>
 			<version>${janko-version}</version>
 		</dependency>

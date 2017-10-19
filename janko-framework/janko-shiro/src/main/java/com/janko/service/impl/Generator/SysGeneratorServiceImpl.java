@@ -1,16 +1,17 @@
-package com.janko.service.impl;
-
-import com.janko.dao.SysGeneratorDao;
-import com.janko.service.SysGeneratorService;
-import com.janko.utils.GenUtils;
-import org.apache.commons.io.IOUtils;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Service;
+package com.janko.service.impl.Generator;
 
 import java.io.ByteArrayOutputStream;
 import java.util.List;
 import java.util.Map;
 import java.util.zip.ZipOutputStream;
+
+import org.apache.commons.io.IOUtils;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.janko.dao.Generator.SysGeneratorDao;
+import com.janko.service.Generator.SysGeneratorService;
+import com.janko.utils.GenUtils;
 
 @Service("sysGeneratorService")
 public class SysGeneratorServiceImpl implements SysGeneratorService {

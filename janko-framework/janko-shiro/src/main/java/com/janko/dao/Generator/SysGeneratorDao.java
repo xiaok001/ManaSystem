@@ -1,4 +1,4 @@
-package com.janko.dao;
+package com.janko.dao.Generator;
 
 import java.util.List;
 import java.util.Map;

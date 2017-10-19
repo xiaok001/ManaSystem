@@ -1,4 +1,4 @@
-package com.janko.service;
+package com.janko.service.Generator;
 
 import java.util.List;
 import java.util.Map;

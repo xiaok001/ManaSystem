@@ -105,17 +105,23 @@ public class SysUserController extends AbstractController {
 	
 	/**
 	 * 保存用户
+	 * @throws Exception 
 	 */
 	@SysLog("保存用户")
 	@RequestMapping("/save")
 	@RequiresPermissions("sys:user:save")
-	public R save(@RequestBody SysUserEntity user){
-		ValidatorUtils.validateEntity(user, AddGroup.class);
-		
-		user.setCreateUserId(getUserId());
-		sysUserService.save(user);
-		
-		return R.ok();
+	public R save(@RequestBody SysUserEntity user) throws Exception {
+		try {
+			ValidatorUtils.validateEntity(user, AddGroup.class);
+
+			user.setCreateUserId(getUserId());
+			sysUserService.save(user);
+
+			return R.ok();
+		} catch (Exception e) {
+			// TODO: handle exception
+			return R.error(e.getMessage());
+		}
 	}
 	
 	/**

@@ -51,7 +51,7 @@ public interface SysUserService {
 	/**
 	 * 保存用户
 	 */
-	void save(SysUserEntity user);
+	void save(SysUserEntity user) ;
 	
 	/**
 	 * 修改用户
