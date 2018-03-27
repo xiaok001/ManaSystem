@@ -12,6 +12,7 @@ import javax.servlet.ServletException;
 import javax.servlet.ServletOutputStream;
 import javax.servlet.http.HttpServletResponse;
 
+import org.apache.log4j.Logger;
 import org.apache.shiro.authc.AuthenticationException;
 import org.apache.shiro.authc.IncorrectCredentialsException;
 import org.apache.shiro.authc.LockedAccountException;
@@ -51,7 +52,7 @@ public class SysLoginController extends AbstractBaseRedisService<String, Object>
 	@Autowired
 	private Producer producer;
 	
-	
+	private static final Logger LOGGER = Logger.getLogger(SysLoginController.class);
 	@RequestMapping("captcha.jpg")
 	public void captcha(HttpServletResponse response)throws ServletException, IOException {
         response.setHeader("Cache-Control", "no-store, no-cache");
@@ -70,17 +71,20 @@ public class SysLoginController extends AbstractBaseRedisService<String, Object>
 	
 	/**
 	 * 登录
+	 * @throws InterruptedException 
 	 */
 	@ResponseBody
 	@RequestMapping(value = "/sys/login", method = RequestMethod.POST)
-	public R login(String username, String password, String captcha)throws IOException {
+	public R login(String username, String password, String captcha)throws IOException, InterruptedException {
 		String kaptcha = ShiroUtils.getKaptcha(Constants.KAPTCHA_SESSION_KEY);
 		//TODO: 取消登陆验证码的验证
 		/*if(!captcha.equalsIgnoreCase(kaptcha)){
 			return R.error(501,"验证码不正确");
 		}*/
 		//TestFun();
-		multiDataSourceTest();
+		
+		//多数据源测试
+		//multiDataSourceTest();
 		try{
 			Subject subject = ShiroUtils.getSubject();
 			//sha256加密
